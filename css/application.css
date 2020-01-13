@@ -1,0 +1,528 @@
+html 
+{
+  overflow-y: scroll; 
+}
+
+body 
+{
+  background: rgb(187, 94, 159);
+  font-family: Roboto, sans-serif; 
+}
+
+input,
+button 
+{
+  outline: none; 
+}
+
+ul 
+{
+  margin: 20;
+  padding: 0; 
+}
+
+li * 
+{
+  float: left;
+  list-style-type: circle 
+}
+
+li,
+h3 {
+  clear: both;
+  list-style: none; 
+}
+
+/* START PARTICLES.JS  */
+#particles-js canvas 
+{
+  display: block;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+  -webkit-transition: opacity .8s ease, -webkit-transform 1.4s ease;
+  transition: opacity .8s ease, transform 1.4s ease
+}
+
+#particles-js
+ {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -10;
+  top: 0;
+  left: 0
+}
+/* end of PARTICLES.JS  */
+
+
+/* start of END PAGE LOGO */
+.svg-wrapper 
+{
+  font-family: 'Roboto Condensed', sans-serif;
+  letter-spacing: 8px; 
+  position: relative;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0 auto;
+  width: 320px;
+}
+
+.shape 
+{
+  stroke-dasharray: 140 540;
+  stroke-dashoffset: -474;
+  stroke-width: 8px;
+  fill: transparent;
+  stroke: #8e24aa;
+  border-bottom: 8px solid black;
+  transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+}
+
+.text
+ {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-style: bold;
+  font-size: 20px;
+  text-align: center;
+  line-height: 32px;
+  letter-spacing: 8px;
+  color: #fff;
+  top: -48px;
+  position: relative;
+}
+/* end of END PAGE LOGO */
+
+.counter
+{
+  text-align: right;
+  font-style: italic;
+  color: #888; 
+}
+
+.date
+{
+  font-family: 'Roboto mono', monospace;
+  margin-left: 60px;
+  margin-top: 6px;
+  font-style: italic;
+  position: absolute; 
+}
+
+.text a 
+{
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.percentageCompleted
+{
+  margin: 20px;
+}
+
+.svg-wrapper:hover .shape 
+{
+  font-family: 'Roboto Condensed', sans-serif;
+  stroke-width: 4px;
+  stroke-dashoffset: 0;
+  stroke-dasharray: 760;
+}
+
+.time
+{
+  font-family: 'Roboto Mono', monospace;
+  text-align: center;
+  font-size: 25px;
+}
+
+.motivational
+{ 
+  font-family: 'Roboto Condensed', sans-serif;
+  text-align: center;
+  font-size: 20px;
+}
+
+.container 
+{
+  display: block;
+  width: 700px;
+  margin: 50px auto;
+  margin-bottom: 0px;
+  margin-top: 10px;
+  margin-bottom: 70px;
+  padding: 39px 40px 60px 40px;
+  background-color: #FEFEFE;
+  border-radius: 40px;
+  box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.5);
+ }
+
+.description
+{
+  position: relative;
+  text-align: center;
+  font-size: 40px;
+}
+
+.todo__done 
+{
+  padding-top: 18px;
+  z-index: 0; 
+}
+
+.button 
+{
+  background: none;
+  border: 0;
+  color: #888;
+  width: 25px;
+  margin: 7px 0 0 0;
+  padding: 0;
+  cursor: pointer; 
+}
+.button:hover 
+{
+  color: #333; 
+}
+
+.section__title
+ {
+  font-family: Roboto, sans-serif;
+  color: #333;
+  text-align: left;
+  font-weight: 700;
+  font-size: 15px;
+  border-bottom: 2px solid #9C27B0;
+  padding: 20px 0 10px;
+  margin: 0;
+  text-transform: uppercase;
+  cursor: pointer; 
+}
+
+.section__title--add 
+{
+  display: block;
+  margin: 0 0 20px; 
+}
+
+.task__title, .task__checkbox 
+{
+  cursor: pointer; 
+}
+
+.task
+{
+  overflow: hidden;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee; 
+}
+
+.task__checkbox 
+{
+  margin: 0 10px;
+  position: relative;
+  top: 15px; 
+}
+
+.task__title 
+{
+  font-size: 16px;
+  line-height: 16px;
+  width: 290px;
+  padding: 12px 0 10px 11px; 
+ }
+
+.task__input 
+{
+  width: 285px; 
+}
+.task__input--new 
+{
+  float: left;
+  width: 645px; 
+}
+.task__input--new:focus 
+{
+  border-color: #BDBDBD; 
+}
+
+.text-input
+ {
+  font-size: 16px;
+  line-height: 16px;
+  height: 16px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background: #FEFEFE;
+  border-radius: 6px;
+  font-family: 'Roboto mono', monospace; 
+  color: #888; 
+}
+
+.text-input:focus 
+{
+  color: #333;
+}
+
+.todo__title-wrap--todo
+{
+  margin-bottom: 10px;
+}
+
+.icon__add:hover 
+{
+  background-color: #9C27B0; 
+}
+
+.material-icons 
+{
+  font-size: 22px; 
+}
+
+.task__delete:hover 
+{
+  color: #e53935; 
+}
+
+.task__input 
+{
+  display: none;
+  font-size: 16px;
+  line-height: 16px;
+  height: 16px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background: #FEFEFE;
+  border-radius: 10px;
+  font-family: Roboto, sans-serif; 
+  color: #888; 
+}
+
+.task__input:focus 
+{
+  border-color: #BDBDBD; 
+}
+
+.save
+ {
+  font-family: 'Roboto mono', monospace; 
+  letter-spacing: 6px; 
+  display: inline-block;
+  font-size: 16px;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #FEFEFE;
+  top: -46px;
+  padding: 12px;
+  border-radius: 5px 5px 5px 5px;
+  background-color: #9C27B0;
+  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.5);
+  width: 320px;
+}
+
+.save:hover,
+.save:focus,
+.save:active 
+{
+  background-color: rgb(91, 11, 105);
+  color: #FEFEFE;
+ }
+
+.buttons
+{
+  font-family: 'Roboto mono', monospace;
+  position: relative; 
+  display: inline-block;
+  text-align: center;
+}
+
+.button1
+{
+  font-family: 'Roboto Mono', monospace;
+  margin-left: 70px;
+  margin-right: 35px;
+  width: auto;
+  font-size: 16px;
+  text-align: left;
+  text-transform: uppercase;
+  color: #FEFEFE;
+  position: relative;
+  top: -20px;
+  padding: 12px;
+  border-radius: 10px 10px 10px 10px;
+  background-color: #d467b9;
+  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.5);
+  transition-property: color, background-color;
+  transition: .3s ease-in-out; 
+}
+
+.button1:hover,
+.button1:focus,
+.button1:active 
+{
+  background-color: #9C27B0;
+  color: #FEFEFE; 
+}
+
+.button2
+{
+  font-family: 'Roboto Mono', monospace;
+  margin-left: 35px;
+  margin-right: 35px;
+  width: auto;
+  font-size: 16px;
+  text-align: left;
+  text-transform: uppercase;
+  color: #FEFEFE;
+  position: relative;
+  top: -20px;
+  padding: 12px;
+  border-radius: 10px 10px 10px 10px;
+  background-color: #d467b9;
+  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.5);
+  transition-property: color, background-color;
+  transition: .3s ease-in-out; 
+}
+
+.button2:hover,
+.button2:focus,
+.button2:active 
+{
+  background-color: #9C27B0;
+  color: #FEFEFE; 
+}
+
+.button3
+{
+  font-family: 'Roboto Mono', monospace;
+  margin-left: 35px;
+  margin-right: 70px;
+  width: auto;
+  font-size: 16px;
+  text-align: left;
+  text-transform: uppercase;
+  color: #FEFEFE;
+  position: relative;
+  top: -20px;
+  padding: 12px;
+  border-radius: 10px 10px 10px 10px;
+  background-color: #d467b9;
+  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.5);
+  transition-property: color, background-color;
+  transition: .3s ease-in-out; 
+}
+
+.button3:hover,
+.button3:focus,
+.button3:active 
+{
+  background-color: #9C27B0;
+  color: #FEFEFE; 
+}
+
+
+.delete
+{
+  font-family: Roboto, sans-serif; 
+  margin-left: 30px;
+  margin-right: 30px;
+  width: auto;
+  font-size: 16px;
+  text-align: left;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #FEFEFE;
+  position: relative;
+  top: -46px;
+  padding: 12px;
+  border-radius: 0 0 5px 5px;
+  background-color: #d467b9;
+  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.5);
+  transition-property: color, background-color;
+  transition: .3s ease-in-out; 
+}
+
+.delete:hover,
+.delete:focus,
+.delete:active 
+{
+  background-color: #9C27B0;
+  color: #FEFEFE; 
+}
+
+.overlay 
+{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.4); 
+}
+
+.alert 
+{
+  margin: 200px auto;
+  padding: 10px;
+  text-align: center;
+  width: 250px;
+  height: 100px;
+  background: #FEFEFE;
+  border-radius: 5px;
+  border: 3px solid #e53935; 
+}
+
+.alert__button 
+{
+  height: 25px;
+  width: 50px;
+  border-radius: 3px; 
+}
+
+.alert__button--yes:hover 
+{
+  color: #FEFEFE;
+  background-color: #e53935; 
+}
+
+.alert__button--no 
+{
+  margin-left: 10px;
+  margin-right: 70px; 
+}
+
+.alert__button--no:hover 
+{
+  color: #FEFEFE;
+  background-color: #2CC990; 
+}
+
+.is-hidden 
+{
+  display: none; 
+}
+
+.is-done 
+{
+  text-decoration: line-through;
+  color: rgba(0, 0, 0, 0.5); 
+}
+
+.is-editing .task__input
+ {
+  display: block;
+ }
+
+.is-editing .task__title 
+{
+  display: none;
+  margin-top: 1px;
+  margin-left: 10px;
+  margin-bottom: 4px;
+  padding: 8px 0 9px 11px; 
+}
+.task__title:hover{
+  color: #9C27B0;
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- HEAD -->
+<head>
+    <!-- METADATA: AUTHOR, CONTENT, ICON, TITLE -->
+    <meta charset="UTF-8">
+    <meta name="author" content="Stefano Valloncini">
+    <meta name="content" content="A simple to-do list to make your life easier">
+    <link type="image/x-icon" rel="icon" href="favicon.ico">
+    <title>TO-DO list: organize your life</title>
+
+    <!-- CSS: FONTS: ROBOTO, ROBOTO CONDENSED; MATERIAL ICONS, STYLESHEETS -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700|Material+Icons" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto+Mono" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/application.css">
+    <link rel="stylesheet" href="css/titleanimation.css">
+</head>
+
+<!-- BODY -->
+<body onload="start()" >
+
+    <!-- PARTICLES DIV -->
+    <div id="particles-js"></div>
+
+    <!-- TITLE ANIMATION complimentr.com/ -->
+    <div class="titlecontainer">
+        <span class="text1">Welcome to</span>
+        <span class="text2">your TO-DO list</span>
+    </div>
+    
+    <!-- MOTIVATIONAL QUOTE (BY API) -->
+    <i><div id="motivational" class="motivational"></div></i>
+    
+    <!-- DESCRIPTION -->
+    <div class="description">
+        <div id="time" class="time"></div>
+    </div>
+
+    <!-- MAIN CONTAINER: TO-DO LIST -->
+    <div class="container">
+        <!-- BUTTONS IN THE TOP -->
+        <div class="buttons">
+            <button id="js-delete-todo" class="button1">delete todo</button>
+            <button id="js-delete-done" class="button2">delete done</button>
+            <button id="js-delete-all" class="button3">delete all</button>
+            <button id="js-save" class="button save">Save my changes</button>
+            <p>
+                This application will help you to be productive. Work hard, dream big!
+            </p>
+
+            <i><div class="percentageCompleted" id="percentage-Completed">You have achived 100%. Good Job.</div></i>
+        </div>
+        
+        <br /> <br />
+        <!-- ADD ITEM SECTION -->
+        <section class="todo__add">
+            <div class="todo__title-wrap" id="js-label-add">
+                <label for="js-new-task" class="section__title section__title--add">Add a new Item</label>
+            </div>
+            <input id="js-new-task" class="text-input task__input--new" type="text">
+            <button id="js-add-button" class="button"><i class="material-icons icon__add">add_circle</i></button>
+        </section>
+
+        <!-- TO-DO LIST SECTION -->
+        <section class="todo__list">
+            <div class="todo__title-wrap todo__title-wrap--todo" id="js-todo">
+                <h3 class="section__title">To-do</h3>
+            </div>
+            <ul id="js-incomplete-tasks" class="list">
+                <!-- TO-DO ITEM 1 example -->
+                <li class="task">
+                    <input type="checkbox" class="task__checkbox">
+                    <label class="task__title">Complete this TO-DO list.</label>
+                    <label class="date">Tuesday at 12:11:16</label>
+                    <input type="text" class="text-input task__input">
+
+                    <!-- BUTTONS: DELETE, EDIT -->
+                    <button class="button task__delete"><i class="material-icons icon__delete">delete</i></button>
+                    <button class="button task__edit"><i class="material-icons icon__edit">mode_edit</i></button>
+                </li>
+            </ul>
+            <!-- TO-DO ITEM(S) COUNTER -->
+            <div id="todo-counter" class="counter"></div>
+        </section>
+
+        <!-- COMPLETED LIST SECTION -->
+        <section class="todo__done">
+            <div class="todo__title-wrap" id="js-completed">
+                <h3 class="section__title">Completed</h3></div>
+            <ul id="js-completed-tasks" class="list">
+                <!-- COMPLETED ITEM 1 example -->
+                <li class="task">
+                    <input type="checkbox" class="task__checkbox" checked>
+                    <label class="task__title is-done">Add a new item</label>
+                    <label class="date" id="date">Saturday at 10:01:06</label>
+                    <input type="text" class="text-input task__input">
+                    
+                    <!-- BUTTONS: DELETE, EDIT -->
+                    <button class="button task__delete"><i class="material-icons icon__delete">delete</i></button>
+                    <button class="button task__edit"><i class="material-icons icon__edit">mode_edit</i></button>
+                </li>
+            </ul>
+            <!-- COMPLETED ITEM(S) COUNTER -->
+            <div id="done-counter" class="counter"></div>
+        </section>
+    </div>
+    <br />     <br />
+
+    <!-- END PAGE: LOGO -->
+    <br/>       <br />
+    <div class="svg-wrapper">
+        <div class="">Made with ♡ by </div>
+
+        <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+            <rect class="shape" height="60" width="320" />
+            <div class="text"><a href="https://samuelbartels.netlify.com">Samuel Bartels</a></div>
+        </svg>
+    </div>
+
+<!-- SCRIPT: MAIN APP, PARTICLES.MIN.JS -->
+<script src="js/app.js"></script>
+<script src="js/particles.min.js"></script> 
+
+<!-- SCRIPT: PARTICLES.JS LOADER -->
+<script>
+particlesJS("particles-js", {"particles":{"number":{"value":160,"density":{"enable":true,"value_area":800}},"color":{"value":"#ffffff"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":1,"random":true,"anim":{"enable":true,"speed":1,"opacity_min":0,"sync":false}},"size":{"value":3,"random":true,"anim":{"enable":false,"speed":4,"size_min":0.3,"sync":false}},"line_linked":{"enable":false,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":1,"direction":"none","random":true,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":600}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"bubble"},"onclick":{"enable":true,"mode":"repulse"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":250,"size":0,"duration":2,"opacity":0,"speed":3},"repulse":{"distance":400,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});var count_particles, stats, update; stats = new Stats; stats.setMode(0); stats.domElement.style.position = 'absolute'; stats.domElement.style.left = '0px'; stats.domElement.style.top = '0px'; document.body.appendChild(stats.domElement); count_particles = document.querySelector('.js-count-particles'); update = function() { stats.begin(); stats.end(); if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) { count_particles.innerText = window.pJSDom[0].pJS.particles.array.length; } requestAnimationFrame(update); }; requestAnimationFrame(update);;</script>
+</body>
+</html>
